@@ -11,7 +11,7 @@ import {
     setDoc,
     onDisconnect,
 } from "firebase/firestore";
-import styles from "../styles/Chat.module.css";
+import styles from "../styles/chat.module.css";
 
 export default function Chat() {
     const [name, setName] = useState("");
