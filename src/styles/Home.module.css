@@ -1,16 +1,17 @@
 .nameScreen {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #f0f2f5;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 1rem;
 }
 
 .nameCard {
     background: white;
-    padding: 2.5rem;
-    border-radius: 16px;
-    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+    padding: 2.5rem 2rem;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
     width: 100%;
     max-width: 400px;
     text-align: center;
@@ -25,12 +26,13 @@
     font-size: 1.8rem;
     font-weight: 700;
     color: #111;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.4rem;
 }
 
 .nameCard p {
-    color: #666;
-    margin-bottom: 1.5rem;
+    color: #888;
+    margin-bottom: 1.8rem;
+    font-size: 0.95rem;
 }
 
 .nameCard form {
@@ -40,12 +42,13 @@
 }
 
 .nameCard input {
-    padding: 12px 16px;
-    border: 1.5px solid #e0e0e0;
-    border-radius: 10px;
+    padding: 14px 16px;
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
     font-size: 1rem;
     outline: none;
     transition: border 0.2s;
+    width: 100%;
 }
 
 .nameCard input:focus {
@@ -53,24 +56,25 @@
 }
 
 .nameCard button {
-    padding: 12px;
+    padding: 14px;
     background: #6c63ff;
     color: white;
     border: none;
-    border-radius: 10px;
+    border-radius: 12px;
     font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
-    transition: background 0.2s;
+    transition: all 0.2s;
 }
 
 .nameCard button:hover {
     background: #5a52e0;
+    transform: translateY(-1px);
 }
 
 .pageWrapper {
     min-height: 100vh;
-    background: #f0f2f5;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -79,25 +83,31 @@
 
 .container {
     background: white;
-    border-radius: 16px;
-    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
     width: 100%;
     max-width: 560px;
     overflow: hidden;
+    max-height: 90vh;
+    overflow-y: auto;
 }
 
 .header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem 1.5rem;
+    padding: 1rem 1.25rem;
     border-bottom: 1px solid #f0f0f0;
+    position: sticky;
+    top: 0;
+    background: white;
+    z-index: 10;
 }
 
 .headerLogo {
     font-size: 1.1rem;
     font-weight: 700;
-    color: #111;
+    color: #6c63ff;
 }
 
 .headerUser {
@@ -107,16 +117,17 @@
 }
 
 .avatar {
-    width: 32px;
-    height: 32px;
+    width: 34px;
+    height: 34px;
     border-radius: 50%;
-    background: #6c63ff;
+    background: linear-gradient(135deg, #667eea, #764ba2);
     color: white;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 0.85rem;
-    font-weight: 600;
+    font-weight: 700;
+    flex-shrink: 0;
 }
 
 .headerUser span {
@@ -127,13 +138,14 @@
 
 .logoutBtn {
     background: none;
-    border: 1px solid #e0e0e0;
-    border-radius: 6px;
+    border: 1.5px solid #e0e0e0;
+    border-radius: 8px;
     padding: 4px 10px;
-    font-size: 0.8rem;
-    color: #666;
+    font-size: 0.78rem;
+    color: #888;
     cursor: pointer;
     transition: all 0.2s;
+    white-space: nowrap;
 }
 
 .logoutBtn:hover {
@@ -142,40 +154,40 @@
 }
 
 .dashboard {
-    padding: 2rem 1.5rem;
-    text-align: center;
+    padding: 1.5rem;
 }
 
 .dashboard h2 {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     font-weight: 700;
     color: #111;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.3rem;
 }
 
 .dashboard p {
-    color: #666;
-    margin-bottom: 2rem;
+    color: #888;
+    margin-bottom: 1.25rem;
+    font-size: 0.9rem;
 }
 
 .options {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 16px;
+    gap: 12px;
 }
 
 .optionCard {
     background: #fafafa;
-    border: 1.5px solid #e0e0e0;
-    border-radius: 12px;
-    padding: 1.5rem 1rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 14px;
+    padding: 1.25rem 1rem;
     cursor: pointer;
     transition: all 0.2s;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 8px;
+    gap: 6px;
 }
 
 .optionCard:hover {
@@ -185,23 +197,24 @@
 }
 
 .optionIcon {
-    font-size: 2rem;
+    font-size: 1.8rem;
 }
 
 .optionCard h3 {
-    font-size: 1rem;
+    font-size: 0.95rem;
     font-weight: 600;
     color: #111;
 }
 
 .optionCard p {
-    font-size: 0.82rem;
+    font-size: 0.78rem;
     color: #888;
     margin: 0;
+    line-height: 1.4;
 }
 
 .formSection {
-    padding: 2rem 1.5rem;
+    padding: 1.5rem;
 }
 
 .backBtn {
@@ -211,20 +224,24 @@
     font-size: 0.9rem;
     cursor: pointer;
     padding: 0;
-    margin-bottom: 1.5rem;
-    display: block;
+    margin-bottom: 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-weight: 500;
 }
 
 .formSection h2 {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     font-weight: 700;
     color: #111;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.3rem;
 }
 
 .formSection p {
-    color: #666;
+    color: #888;
     margin-bottom: 1.5rem;
+    font-size: 0.9rem;
 }
 
 .formGroup {
@@ -235,18 +252,19 @@
 }
 
 .formGroup label {
-    font-size: 0.85rem;
+    font-size: 0.83rem;
     font-weight: 600;
     color: #444;
 }
 
 .formGroup input {
-    padding: 12px 16px;
-    border: 1.5px solid #e0e0e0;
-    border-radius: 10px;
-    font-size: 1rem;
+    padding: 13px 16px;
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    font-size: 0.95rem;
     outline: none;
     transition: border 0.2s;
+    width: 100%;
 }
 
 .formGroup input:focus {
@@ -255,29 +273,125 @@
 
 .formSection button[type="submit"] {
     width: 100%;
-    padding: 12px;
+    padding: 14px;
     background: #6c63ff;
     color: white;
     border: none;
-    border-radius: 10px;
+    border-radius: 12px;
     font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
-    transition: background 0.2s;
+    transition: all 0.2s;
     margin-top: 0.5rem;
 }
 
 .formSection button[type="submit"]:hover {
     background: #5a52e0;
+    transform: translateY(-1px);
 }
 
 .formSection button[type="submit"]:disabled {
     background: #ccc;
     cursor: not-allowed;
+    transform: none;
 }
 
 .error {
     color: #e53935;
-    font-size: 0.85rem;
+    font-size: 0.83rem;
     margin-bottom: 0.5rem;
+    padding: 10px 12px;
+    background: #fdecea;
+    border-radius: 8px;
+}
+
+.myRoomsSection {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.myRoomsSection h3 {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: #aaa;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 10px;
+}
+
+.roomsList {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 1.5rem;
+}
+
+.roomItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 14px;
+    background: #fafafa;
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-align: left;
+    width: 100%;
+}
+
+.roomItem:hover {
+    border-color: #6c63ff;
+    background: #f5f4ff;
+}
+
+.roomItemLeft {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.roomItemIcon {
+    font-size: 1.4rem;
+}
+
+.roomItemName {
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: #111;
+    margin: 0 0 2px;
+}
+
+.roomItemMeta {
+    font-size: 0.75rem;
+    color: #aaa;
+    margin: 0;
+}
+
+.roomItemArrow {
+    color: #6c63ff;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+@media (max-width: 480px) {
+    .container {
+        border-radius: 0;
+        max-height: 100vh;
+        min-height: 100vh;
+    }
+
+    .pageWrapper {
+        padding: 0;
+        align-items: stretch;
+    }
+
+    .options {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .headerUser span {
+        display: none;
+    }
 }
